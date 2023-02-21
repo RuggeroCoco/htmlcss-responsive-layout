@@ -5,56 +5,132 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
 /* UTILITIES */
-.row {
-  height: 50%;
-  width: 100%;
-  margin: 1rem;
-
-  display: flex;
-  justify-content: space-between;
-  flex-grow: ;
-}
-.col-30 {
-  width: 30%;
-  border-radius: 1rem;
-  padding: 1rem;
-  background-color: hsl(208deg 100% 85%);
+.container {
+  padding: 0 1rem;
 }
 
-.col-70 {
-  width: 63%;
-  border-radius: 1rem;
-  padding: 1rem;
-  background-color: hsl(208deg 100% 85%);
+section {
+  padding: 1.5rem 0;
 }
-
 /* HEADER */
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
-  margin-bottom: 3rem;
+  padding: 0.5rem 1rem;
   background-color: hsl(209deg 100% 50%);
 }
 
-.links-head > a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: white;
+.links {
+  display: none;
 }
 
-.links-head > a:last-child {
+.links > a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.links > a:last-child {
   color: black;
   background-color: white;
   padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+}
+
+.menu > a i {
+  color: white;
+  font-size: 30px;
+}
+/* MAIN */
+.col {
+  margin-bottom: 1rem;
+}
+
+#features .card img {
+  display: block;
+  max-width: 250px;
+}
+
+.card {
+  background-color: hsl(208deg 100% 85%);
+  padding: 1rem;
   border-radius: 1rem;
 }
-/* HEADER */
-/* MAIN */
-.main {
-  margin: auto;
-  width: 64%;
-  border: 1px solid red;
+
+.card-content > h2 {
+  color: hsl(209deg 98% 53%);
+}
+
+.card-content > p {
+  padding: 1rem 0;
+}
+
+.card-content > a {
+  text-decoration: none;
+  color: white;
+  background-color: hsl(209deg 98% 53%);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+}
+
+.card-content > a > i {
+  margin-right: 0.4rem;
+}
+/* *******************************************
+RESPONSIVE
+******************************************* */
+/* TABLET */
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #features .col:first-child {
+    width: calc(100% / 3 * 2);
+  }
+
+  #features .col {
+    width: calc(100% / 3);
+    padding: 0 0.6rem;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+  .links {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .header {
+    margin: 0 auto;
+    padding: 0.5rem 5rem;
+  }
+
+  #features {
+    padding: 1.2rem 5rem;
+  }
+
+  #features .col:first-child {
+    display: flex;
+  }
 }
