@@ -18,6 +18,10 @@ body {
   padding: 0 1rem;
 }
 
+.small-container {
+  padding: 0 1rem;
+}
+
 section {
   padding: 1.5rem 0;
 }
@@ -27,6 +31,7 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
+  width: 100%;
   background-color: hsl(209deg 100% 50%);
 }
 
@@ -103,9 +108,67 @@ section {
   color: hsl(209deg 98% 53%);
 }
 
-#purple {
+#planning {
   background-color: hsl(244deg 60% 73%);
   padding: 2rem 20rem;
+}
+
+#planning > .card {
+  color: white;
+}
+
+#planning > .row {
+  display: flex;
+}
+
+#planning > .col .large {
+  width: 60%;
+}
+
+#planning > .col .small {
+  width: 40%;
+}
+
+.image-planning {
+  height: 60%;
+  width: 50%;
+}
+
+#partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container {
+  text-align: center;
+  width: 55%;
+}
+
+.text-container > h2 {
+  padding: 1rem 0;
+  color: hsl(243deg 60% 74%);
+}
+
+.partner-container {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  border-radius: 2rem;
+  width: 55%;
+  background-color: hsl(243deg 60% 74%);
+}
+
+.partner-container > p {
+  color: white;
+}
+
+.testimonial {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 1rem;
 }
 /* *******************************************
 RESPONSIVE
